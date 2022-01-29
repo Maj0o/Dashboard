@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent-color: #0ea5e9;
+  --text-color: #f0f9ff;
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid:
+    "sidebar header header header" 1fr
+    "sidebar projects projects announcements" 2fr
+    "sidebar projects projects trending" 2fr
+    "sidebar . . ." 10vh;
+}
+
+.item-1 {
+  display: grid;
+}
+
+.item-2 {
+  display: grid;
+}
+
+.item-3 {
+  display: grid;
+}
+
+.sidebar {
+  background-color: var(--accent-color);
+  grid-area: sidebar;
+}
+
+.item {
+  color: var(--text-color);
+}
+
+.header {
+  grid-area: header;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
+}
