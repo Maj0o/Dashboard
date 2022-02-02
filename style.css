@@ -1,21 +1,45 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
-  --accent-color: #2563eb;
-  --text-color: #f0f9ff;
+  --nav-color: #f43f5e;
+  --text-color: #fff1f2;
 }
 
 .grid-container {
   display: grid;
   height: 100vh;
+  grid-template-areas:
+    "nav-dash header header header"
+    "nav-group1 projects projects announcements"
+    "nav-group2 projects projects trending"
+    "nav footer footer footer";
 }
 
-.sidebar {
-  grid-area: sidebar;
+.nav {
+  grid-area: nav;
+  color: var(--text-color);
+}
+
+.dashboard {
+  grid-area: nav-dash;
+  background-color: var(--nav-color);
+  color: var(--text-color);
+}
+
+.group1 {
+  grid-area: nav-group1;
+  background-color: var(--nav-color);
+  color: var(--text-color);
+}
+
+.group2 {
+  grid-area: nav-group2;
+  color: var(--text-color);
+  background-color: var(--nav-color);
 }
 
 .header {
@@ -32,4 +56,8 @@
 
 .trending {
   grid-area: trending;
+}
+
+.footer {
+  grid-area: footer;
 }
