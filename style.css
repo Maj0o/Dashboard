@@ -8,6 +8,7 @@
   --nav-color: #f43f5e;
   --text-color: #fff1f2;
   --bg-color: #ffffff;
+  --container-bg: #d1d5db;
 }
 
 .grid-container {
@@ -18,17 +19,21 @@
     "nav-group1 projects projects announcements"
     "nav-group2 projects projects trending"
     "nav-group3 footer footer footer";
-    grid-template-rows: 15% 30% 40%;
-    grid-template-columns: 20% 30% 35%;
+  grid-template-rows: 0.15fr 0.3fr 0.3fr 0.35fr;
+  grid-template-columns: 0.15fr 0.35fr 0.35fr 0.15fr;
 }
 
 .nav-dash {
+  padding: 1em;
+  text-align: center;
   grid-area: nav-dash;
   background-color: var(--nav-color);
   color: var(--text-color);
 }
 
 .nav-group1 {
+  display: flex;
+  justify-content: center;
   grid-area: nav-group1;
   background-color: var(--nav-color);
   color: var(--text-color);
@@ -53,16 +58,20 @@
 
 .projects {
   grid-area: projects;
+  background-color: var(--container-bg);
 }
 
 .announcements {
   grid-area: announcements;
+  background-color: var(--container-bg);
 }
 
 .trending {
   grid-area: trending;
+  background-color: var(--container-bg);
 }
 
 .footer {
   grid-area: footer;
+  background-color: var(--container-bg);
 }
