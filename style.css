@@ -7,6 +7,7 @@
 :root {
   --nav-color: #f43f5e;
   --text-color: #fff1f2;
+  --bg-color: #ffffff;
 }
 
 .grid-container {
@@ -16,34 +17,38 @@
     "nav-dash header header header"
     "nav-group1 projects projects announcements"
     "nav-group2 projects projects trending"
-    "nav footer footer footer";
+    "nav-group3 footer footer footer";
+    grid-template-rows: 15% 30% 40%;
+    grid-template-columns: 20% 30% 35%;
 }
 
-.nav {
-  grid-area: nav;
-  color: var(--text-color);
-}
-
-.dashboard {
+.nav-dash {
   grid-area: nav-dash;
   background-color: var(--nav-color);
   color: var(--text-color);
 }
 
-.group1 {
+.nav-group1 {
   grid-area: nav-group1;
   background-color: var(--nav-color);
   color: var(--text-color);
 }
 
-.group2 {
+.nav-group2 {
   grid-area: nav-group2;
+  color: var(--text-color);
+  background-color: var(--nav-color);
+}
+
+.nav-group3 {
+  grid-area: nav-group3;
   color: var(--text-color);
   background-color: var(--nav-color);
 }
 
 .header {
   grid-area: header;
+  background-color: var(--bg-color);
 }
 
 .projects {
