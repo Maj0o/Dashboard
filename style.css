@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
 :root {
@@ -15,39 +16,16 @@
   display: grid;
   height: 100vh;
   grid-template-areas:
-    "nav-dash header header header"
-    "nav-group1 projects projects announcements"
-    "nav-group2 projects projects trending"
-    "nav-group3 footer footer footer";
-  grid-template-rows: 0.15fr 0.3fr 0.3fr 0.35fr;
-  grid-template-columns: 0.15fr 0.35fr 0.35fr 0.15fr;
+    "nav header header"
+    "nav projects ann"
+    "nav projects trending";
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-template-rows: 15vh 40vh;
 }
 
-.nav-dash {
-  padding: 1em;
-  text-align: center;
-  grid-area: nav-dash;
-  background-color: var(--nav-color);
-  color: var(--text-color);
-}
-
-.nav-group1 {
-  display: flex;
-  justify-content: center;
-  grid-area: nav-group1;
-  background-color: var(--nav-color);
-  color: var(--text-color);
-}
-
-.nav-group2 {
-  grid-area: nav-group2;
-  color: var(--text-color);
-  background-color: var(--nav-color);
-}
-
-.nav-group3 {
-  grid-area: nav-group3;
-  color: var(--text-color);
+.nav {
+  grid-area: nav;
+  color: var(--bg-color);
   background-color: var(--nav-color);
 }
 
@@ -56,22 +34,29 @@
   background-color: var(--bg-color);
 }
 
+/* .header-left {
+  
+} */
+
 .projects {
+  padding: 1em;
   grid-area: projects;
   background-color: var(--container-bg);
 }
 
-.announcements {
-  grid-area: announcements;
+.ann {
+  padding: 1em;
+  grid-area: ann;
   background-color: var(--container-bg);
 }
 
 .trending {
+  padding: 1em;
   grid-area: trending;
   background-color: var(--container-bg);
 }
 
-.footer {
-  grid-area: footer;
-  background-color: var(--container-bg);
+.profile-icon {
+  width: 64px;
+  height: 64px;
 }
