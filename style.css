@@ -16,17 +16,39 @@
   display: grid;
   height: 100vh;
   grid-template-areas:
-    "nav header header"
-    "nav projects ann"
-    "nav projects trending";
+    "navbar header header"
+    "navbar projects ann"
+    "navbar projects trending";
   grid-template-columns: 0.25fr 1fr 0.2fr;
   grid-template-rows: 20vh 50vh 30vh;
 }
 
-.nav {
-  grid-area: nav;
-  color: var(--bg-color);
+.navbar {
+  color: var(--text-color);
   background-color: var(--nav-color);
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  grid-area: navbar;
+  grid-template-areas:
+    "group1"
+    "group2"
+    "group3";
+    
+}
+
+.group1 {
+  grid-area: group1;
+  background-color: var(--nav-color);
+}
+
+.group2 {
+  grid-area: group2;
+  background-color: var(--nav-color);
+}
+
+.group3 {
+  grid-area: group3;
 }
 
 .header {
@@ -38,15 +60,15 @@
 
 .header-left {
   display: grid;
-  grid-template-areas: 
-  "hdr-left"
-  "hlc";
+  grid-template-areas:
+    "hdr-left"
+    "hlc";
   grid-area: hdr-left;
 }
 
 .header-left-container {
   padding: 1em;
-  gap: .25em;
+  gap: 0.25em;
   display: flex;
   align-items: center;
   grid-area: hlc;
@@ -58,12 +80,11 @@
 
 .header-right {
   display: grid;
-  grid-template-areas: "hrc"
-  "buttons";
+  grid-template-areas:
+    "hrc"
+    "buttons";
   grid-area: hdr-right;
 }
-
-
 
 img {
   height: 48px;
@@ -101,11 +122,11 @@ img {
 }
 
 button {
-  padding: .35em 1.25em;
+  padding: 0.35em 1.25em;
   background-color: #f43f5e;
   color: white;
   border-radius: 1em;
-  box-shadow: .1em .1em #f43f5e;
+  box-shadow: 0.1em 0.1em #f43f5e;
 }
 
 .buttons {
@@ -119,6 +140,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: right;
-  padding: .5em;
+  padding: 0.5em;
   gap: 1em;
 }
