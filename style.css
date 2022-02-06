@@ -10,6 +10,7 @@
   --text-color: #fff1f2;
   --bg-color: #ffffff;
   --container-bg: #d1d5db;
+  --shadow: #60a5fa;
 }
 
 .grid-container {
@@ -19,8 +20,8 @@
     "navbar header header"
     "navbar projects ann"
     "navbar projects trending";
-  grid-template-columns: 0.25fr 1fr 0.2fr;
-  grid-template-rows: 20vh 50vh 30vh;
+  grid-template-columns: 0.25fr 1.5fr 0.25fr;
+  grid-template-rows: 0.3fr 2fr 1fr;
 }
 
 .navbar {
@@ -28,27 +29,33 @@
   background-color: var(--nav-color);
   list-style: none;
   display: grid;
-  justify-content: center;
   grid-area: navbar;
+  justify-content: center;
   grid-template-areas:
     "group1"
-    "group2"
-    "group3";
-    
+    "group2";
+  grid-template-rows: repeat(15, auto);
 }
 
 .group1 {
+  padding: 0.5em;
   grid-area: group1;
-  background-color: var(--nav-color);
+  font-size: 1.5rem;
+  display: grid;
+  justify-content: center;
+  gap: 0.25em;
+  grid-template-columns: repeat(2, auto);
 }
 
 .group2 {
+  display: grid;
+  padding: 1em;
+  gap: 0.5em;
   grid-area: group2;
-  background-color: var(--nav-color);
-}
-
-.group3 {
-  grid-area: group3;
+  font-size: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, auto);
 }
 
 .header {
@@ -74,10 +81,6 @@
   grid-area: hlc;
 }
 
-.text {
-  padding: 1em;
-}
-
 .header-right {
   display: grid;
   grid-template-areas:
@@ -89,12 +92,6 @@
 img {
   height: 48px;
   width: 48px;
-}
-
-.projects {
-  padding: 1em;
-  grid-area: projects;
-  background-color: var(--container-bg);
 }
 
 .ann {
@@ -142,4 +139,39 @@ button {
   justify-content: right;
   padding: 0.5em;
   gap: 1em;
+}
+
+.card-container {
+  margin: 0.25em -0.1em;
+  background-color: var(--text-color);
+  height: 20vh;
+  width: 20vw;
+  border-radius: 0.75em;
+  box-shadow: -0.5em 0em var(--shadow);
+}
+
+.card-container1 {
+  margin: 0.25em -0.1em;
+  background-color: var(--text-color);
+  height: 20vh;
+  width: 20vw;
+  border-radius: 0.75em;
+  box-shadow: -0.5em 0em var(--shadow);
+}
+
+.card-container2 {
+  margin: 0.25em -0.1em;
+  background-color: var(--text-color);
+  height: 20vh;
+  width: 20vw;
+  border-radius: 0.75em;
+  box-shadow: -0.5em 0em var(--shadow);
+}
+
+.projects {
+  padding: 1em;
+  grid-area: projects;
+  display: grid;
+  grid-auto-flow: row;
+  background-color: var(--container-bg);
 }
