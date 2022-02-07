@@ -7,10 +7,11 @@
 
 :root {
   --nav-color: #f43f5e;
-  --text-color: #fff1f2;
+  --text-color: #f8f7f7;
   --bg-color: #ffffff;
   --container-bg: #d1d5db;
   --shadow: #60a5fa;
+  --hover: #fbbf24;
 }
 
 .grid-container {
@@ -20,8 +21,7 @@
     "navbar header header"
     "navbar pcc ann"
     "navbar pcc trending";
-  grid-template-columns: 0.25fr 2fr 0.5fr;
-  grid-template-rows: 0.3fr 1fr 1fr;
+    grid-template-columns: 15% 65% 20%;
   background-color: var(--container-bg);
 }
 
@@ -39,21 +39,19 @@
 }
 
 .group1 {
-  padding: 0.5em;
+  padding: 0.25em;
   grid-area: group1;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   display: grid;
   justify-content: center;
-  gap: 0.25em;
   grid-template-columns: repeat(2, auto);
 }
 
 .group2 {
   display: grid;
-  padding: 1em;
-  gap: 0.5em;
+  gap: 0.25em;
   grid-area: group2;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   align-items: center;
   justify-content: center;
   grid-template-columns: repeat(2, auto);
@@ -75,7 +73,7 @@
 }
 
 .header-left-container {
-  padding: 1em;
+  padding: 0.25em;
   gap: 0.25em;
   display: flex;
   align-items: center;
@@ -96,13 +94,14 @@ img {
 }
 
 .ann {
-  padding: 1em;
+  display: grid;
+  max-height: 30vh;
   grid-area: ann;
   background-color: var(--container-bg);
 }
 
 .trending {
-  padding: 1em;
+  padding: 0.25em;
   grid-area: trending;
   background-color: var(--container-bg);
 }
@@ -110,11 +109,11 @@ img {
 .search {
   display: flex;
   align-items: center;
-  padding: 1em;
+  padding: 0.25em;
 }
 
 #site-search {
-  border-radius: 1em;
+  border-radius: 0.25em;
   background-color: gray;
   opacity: 0.25;
 }
@@ -123,12 +122,12 @@ button {
   padding: 0.35em 1.25em;
   background-color: #f43f5e;
   color: white;
-  border-radius: 1em;
+  border-radius: 0.25em;
   box-shadow: 0.1em 0.1em #f43f5e;
 }
 
 .buttons {
-  padding: 1em;
+  padding: 0.25em;
   text-align: right;
   grid-area: buttons;
 }
@@ -138,8 +137,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: right;
-  padding: 0.5em;
-  gap: 1em;
+  padding: 0.25em;
+  gap: 0.25em;
 }
 
 .card-container1,
@@ -149,10 +148,11 @@ button {
 .card-container5,
 .card-container6 {
   background-color: var(--text-color);
-  height: 20vh;
-  width: 20vw;
+  min-height: 20vh;
+  min-width: 20vw;
+  padding: 0.25em;
   border-radius: 0.75em;
-  box-shadow: -0.5em 0em var(--shadow);
+  box-shadow: -0.25em 0em var(--shadow);
 }
 
 .card-container1 {
@@ -160,79 +160,101 @@ button {
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 0.25em;
 }
 
 .icons {
   display: grid;
   justify-content: right;
   grid-template-columns: repeat(3, auto);
-  padding: 1em;
+  padding: 0.25em;
   gap: 1.5em;
+}
+
+SVG:hover {
+  color: var(--hover);
 }
 
 .card-container2 {
   grid-area: cc2;
-    display: grid;
+  display: grid;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 0.25em;
 }
 
 .card-container3 {
   grid-area: cc3;
-      display: grid;
+  display: grid;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 0.25em;
 }
 
 .card-container4 {
   grid-area: cc4;
-      display: grid;
+  display: grid;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 0.25em;
 }
 
 .card-container5 {
   grid-area: cc5;
-      display: grid;
+  display: grid;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 0.25em;
 }
 
 .card-container6 {
   grid-area: cc6;
-      display: grid;
+  display: grid;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  padding: 0.25em;
 }
 
-.projects {
-  background-color: var(--container-bg);
-  padding: 1em;
+.title {
+  display: grid;
+  min-height: 5vh;
+  align-items: center;
+  padding: 0.2em;
 }
 
 .project-container {
   display: grid;
   grid-area: pcc;
+  min-width: 20vw;
+  min-height: 20vh;
+  height: 50vh;
+  width: 50vw;
+  padding: 0.25em;
   grid-template-areas:
     "cc1 cc2"
     "cc3 cc4"
     "cc5 cc6";
-  justify-content: space-between;
-  align-items: center;
-  gap: 1em;
-  padding: 1em;
+  gap: 2em;
 }
 
 .ann-card {
-  height: 15vh;
-  width: 15vw;
-  padding: 1em;
+  min-height: 15vh;
+  min-width: 15vw;
+  height: 25vh;
+  width: 25vw;
+  padding: 0.1em;
   background-color: var(--text-color);
   border-radius: 0.25em;
+}
+
+.ann-card > p {
+  padding: 0.25em;
+}
+
+.tcc {
+  display: grid;
+  align-items: center;
+  min-width: 15vw;
+  min-height: 15vh;
+  background-color: var(--text-color);
 }
