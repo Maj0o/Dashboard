@@ -244,10 +244,19 @@ SVG:hover {
   min-width: 15vw;
   height: 20vh;
   width: 20vw;
-  padding: 0.2em;
   background-color: var(--text-color);
   border-radius: 0.5em;
   grid-area: trending;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: .25em;
+  justify-content: space-around;
+}
+
+.subtext {
+  opacity: .6;
 }
 
 .ann-card > p {
@@ -275,7 +284,4 @@ SVG:hover {
   grid-area: t-title;
 }
 
-.trending-icons {
-  
-}
 
