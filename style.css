@@ -230,20 +230,19 @@ SVG:hover {
 
 .ann-card {
   grid-area: ann-card;
-  min-height: 15vh;
-  min-width: 15vw;
-  height: 40vh;
-  width: 20vw;
-  padding: 0.25em;
+  min-height: 30vh;
+  min-width: 30vw;
+  width: 30vw;
+  padding: 0.1em;
   background-color: var(--text-color);
   border-radius: 0.5em;
 }
 
 .trending {
-  min-height: 15vh;
-  min-width: 15vw;
+  min-height: 20vh;
+  min-width: 20vw;
   height: 20vh;
-  width: 20vw;
+  width: 30vw;
   background-color: var(--text-color);
   border-radius: 0.5em;
   grid-area: trending;
@@ -251,12 +250,12 @@ SVG:hover {
   align-items: center;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
-  gap: .25em;
+  gap: 0.25em;
   justify-content: space-around;
 }
 
 .subtext {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .ann-card > p {
@@ -264,7 +263,7 @@ SVG:hover {
 }
 
 .ann {
-  padding: .1em;
+  padding: 0.1em;
 }
 
 .ann > h3 {
@@ -274,14 +273,12 @@ SVG:hover {
 .ann-c {
   display: grid;
   grid-template-areas:
-  "ann-card"
-  "t-title"
-  "trending";
+    "ann-card"
+    "t-title"
+    "trending";
   gap: 1em;
 }
 
 .t-title {
   grid-area: t-title;
 }
-
-
